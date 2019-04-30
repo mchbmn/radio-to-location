@@ -20,6 +20,6 @@ The steps we take are the following (each of which are presented in their own co
 
 **4. Mapping** (`./4_mapping`) again using a Google service we geocode and plot the information extracted  through our transcription and natural language processing
 
-![81fc266d.png](./assets/81fc266d.png)
+![81fc266d.png](https://github.com/Mbembem/radio-to-location/blob/master/assets/0223f526.png)
 
 To run Google Cloud Speech-to-Text you will require an API key of your own([found here](https://developers.google.com/maps/documentation/geocoding/get-api-key)).
