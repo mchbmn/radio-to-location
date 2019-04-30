@@ -1,5 +1,3 @@
-README          
-
 # Camp Fire Radio-to-Location
 
 By **Mitchell Bohman, Nour Zahlan, and Masiur Abik**
@@ -14,7 +12,7 @@ The steps we take are the following (each of which are presented in their own co
 
 **1. Audio Processing**(`./1_data_collection_processing`) in which we perform audio signal processing to turn collected audio files into useable samples, and webscrape a cross reference list of locations
 
-**2. Speech Recognition** (`./2_speech_recognition`) where we develop two versions of a call to a Google service using their API to transcribe the speech samples given to it.
+**2. Speech Recognition** (`./2_speech_recognition`) where we develop two versions of a call to a Google service using their API to transcribe the speech samples given to it. *NOTE*: To run Google Cloud Speech-to-Text you will require an API key of your own ([found here](https://developers.google.com/maps/documentation/geocoding/get-api-key)).
 
 **3. Named Entity Extraction**(`./3_named_entity_extraction`) using a distinct natural language processing operation and a pretrained model provided by spaCy we extract locations named in the samples.  
 
@@ -22,4 +20,6 @@ The steps we take are the following (each of which are presented in their own co
 
 ![81fc266d.png](https://github.com/Mbembem/radio-to-location/blob/master/assets/0223f526.png)
 
-To run Google Cloud Speech-to-Text you will require an API key of your own([found here](https://developers.google.com/maps/documentation/geocoding/get-api-key)).
+## Conclusion
+
+In short, we feel confident in saying that we can parse locations named in radio transmissions with a fair amount of accuracy (on a scale of a region, if not a city). The map we ended up plotting follows the well-documented contours the 2018 Camp Fire quite obviously, with some false positives apparent below it from unrelated events. We were also left feeling like our prototype documented here barely scratched the surface of this project. Given more time and greater computational resources to manage the large quantities of large audio files, this prototype could be elaborated on to provide an important service during catastrophic events. If combined with new practices -- imagine if the professionals deployed during emergency events developed a spoken protocol for naming locations knowing that a similar model was attempting to transcribe and locate the things they named -- it could have significant impact on the way resources are mobilized. Such a model, if implemented adequately, could change the infrastructure for dealing with a wilder world. 
