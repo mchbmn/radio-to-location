@@ -12,12 +12,14 @@ In reduced technical terms we want to know if we can accurately map locations na
 
 The steps we take are the following (each of which are presented in their own corresponding `jupyter notebook`):
 
-**1. Audio Processing**(`./1_data_collection_processing`) in which we perform audio signal processing to turn collected audio files into useable samples, and webscrape a cross reference list of locations 
+**1. Audio Processing**(`./1_data_collection_processing`) in which we perform audio signal processing to turn collected audio files into useable samples, and webscrape a cross reference list of locations
+
 **2. Speech Recognition** (`./2_speech_recognition`) where we develop two versions of a call to a Google service using their API to transcribe the speech samples given to it.
+
 **3. Named Entity Extraction**(`./3_named_entity_extraction`) using a distinct natural language processing operation and a pretrained model provided by spaCy we extract locations named in the samples.  
+
 **4. Mapping** (`./4_mapping`) again using a Google service we geocode and plot the information extracted  through our transcription and natural language processing
 
+![81fc266d.png](./assets/81fc266d.png)
 
-[Get API Key  \|  Geocoding API  |  Google Developers](https://developers.google.com/maps/documentation/geocoding/get-api-key)
-
-![81fc266d.png](:storage/66aca729-7ef7-4f67-82fe-9ada168ff66b/81fc266d.png)
+To run Google Cloud Speech-to-Text you will require an API key of your own([found here](https://developers.google.com/maps/documentation/geocoding/get-api-key)).
